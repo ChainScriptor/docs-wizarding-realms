@@ -6,7 +6,6 @@ import Image from "next/image";
 import { FireSphere } from "@/components/ui/fire-sphere";
 import { Button } from "@/components/ui/button";
 import PrivateAccessBanner from "@/components/PrivateAccessBanner";
-import { SocialLinks } from "@/components/ui/social-links";
 import WizardingStory from "@/components/WizardingStory";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { MessageCircle, X as XIcon } from "lucide-react";
@@ -70,8 +69,6 @@ export default function WaitlistLanding() {
       {/* Private Access Banner */}
       <PrivateAccessBanner />
 
-      {/* Social Links - Left Side */}
-      {/* <SocialLinks /> */}
 
       {/* Fire Sphere Background */}
       <div className="absolute inset-0 z-0 -translate-y-[420px] sm:-translate-y-48 lg:-translate-y-56">
