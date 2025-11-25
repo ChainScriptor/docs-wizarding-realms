@@ -117,7 +117,7 @@ export default function WaitlistLanding() {
               alt="Wizarding Realms"
               width={950}
               height={200}
-              className="w-4/5 h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+              className="w-1/2 h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
               priority
             />
 
@@ -128,7 +128,7 @@ export default function WaitlistLanding() {
                 alt="Arcane familiar"
                 width={110}
                 height={110}
-                className="w-56 h-56 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+                className="w-32 h-32 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
                 unoptimized
                 priority
               />
@@ -137,7 +137,7 @@ export default function WaitlistLanding() {
                 alt="Arcane familiar"
                 width={110}
                 height={110}
-                className="w-64 h-64 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] rotate-3"
+                className="w-36 h-36 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] rotate-3"
                 unoptimized
                 priority
               />
@@ -150,7 +150,7 @@ export default function WaitlistLanding() {
                 alt="Mythical steed"
                 width={360}
                 height={120}
-                className="w-80 h-80 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+                className="w-40 h-40 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
                 unoptimized
                 priority
               />
@@ -159,7 +159,7 @@ export default function WaitlistLanding() {
                 alt="Archon sentinel"
                 width={120}
                 height={120}
-                className="w-64 h-64 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] -rotate-6"
+                className="w-36 h-36 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] -rotate-6"
                 unoptimized
                 priority
               />
@@ -173,7 +173,7 @@ export default function WaitlistLanding() {
               alt="Arcane familiar"
               width={120}
               height={120}
-              className="w-48 h-48 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+              className="w-32 h-32 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
               unoptimized
               priority
             />
