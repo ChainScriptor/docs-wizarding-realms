@@ -27,7 +27,7 @@ const storyBlocks: StoryBlock[] = [
         content: (
             <>
                 Thirty years ago, the Final War shattered the world. An ancient Archon unleashed the Hexagon’s Curse, fracturing{" "}
-                <span className="text-amber-300">15,555 Floating Realms</span> above the Black Lake. The Hexagon—a sacred emblem
+                <span className="text-indigo-300">15,555 Floating Realms</span> above the Black Lake. The Hexagon—a sacred emblem
                 of six magical affinities (Light, Fire, Frost, Nature, Earth, Shadow)—was broken, spreading Whispering Mist that
                 hides powerful spells and traps. The sky fell silent. Mana now only flows through Ley Lines connecting the
                 affinities. The Floating Realms drift, tied together by the Mystic Railway.
@@ -80,8 +80,8 @@ const storyBlocks: StoryBlock[] = [
         type: "paragraph",
         content: (
             <span className="italic text-white/80">
-                The Hexagon whispers. Your chosen affinity determines your power or your weakness. Light or Shadow? Guild or
-                Horde? The choice is yours. Will you weave the destiny of magic, or fall into corruption?
+                The Hexagon whispers. Your chosen affinity determines your power or your weakness. Light or Shadow? Guild or Horde?
+                The choice is yours. Will you weave the destiny of magic, or fall into corruption?
             </span>
         ),
     },
@@ -151,7 +151,7 @@ function VideoPlayer() {
     }, []);
 
     return (
-        <div className="relative w-full rounded-3xl border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden">
+        <div className="relative w-full rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(79,70,229,0.6)] overflow-hidden">
             {[0, 1].map((idx) => {
                 const isActive = activePlayer === idx;
                 return (
@@ -223,8 +223,8 @@ export default function WizardingStory() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/80 to-black" />
             </div>
 
-            <div className="relative w-full max-w-5xl rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(255,50,0,0.25)] backdrop-blur-3xl overflow-hidden">
-                <div className="h-1 bg-gradient-to-r from-amber-500 via-red-500 to-amber-500" />
+            <div className="relative w-full max-w-5xl rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl overflow-hidden">
+                <div className="h-1 bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700" />
                 <div className="p-6 md:p-10 space-y-8 text-white">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
@@ -234,7 +234,7 @@ export default function WizardingStory() {
                     >
                         <p className="text-sm uppercase tracking-[0.4em] text-white/60">Ancient Lore Archive</p>
                         <h1
-                            className="text-4xl md:text-5xl font-semibold text-amber-200 drop-shadow-lg"
+                            className="text-4xl md:text-5xl font-semibold text-indigo-200 drop-shadow-lg"
                             style={{ fontFamily: "var(--font-cinzel)" }}
                         >
                             The Wizarding Realms Chronicle
@@ -289,14 +289,14 @@ export default function WizardingStory() {
                     </motion.div>
 
                     <motion.div
-                        className="flex flex-col gap-3 items-center"
+                        className="flex flex-col gap-3 items-center "
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
                         <Button
                             onClick={handleNarrationToggle}
-                            className="group relative w-full sm:w-auto overflow-hidden rounded-full bg-gradient-to-r from-amber-500 to-rose-600 px-10 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(255,76,41,0.4)] transition hover:scale-105"
+                            className="from-indigo-500 to-indigo-700 px-10 py-4 text-lg font-semibold text-black shadow-[0_0_30px_rgba(79,70,229,0.6)] transition hover:scale-105"
                             style={{ fontFamily: "var(--font-body)" }}
                         >
                             <span className="relative z-10 flex items-center gap-3">
@@ -312,4 +312,3 @@ export default function WizardingStory() {
         </div>
     );
 }
-
