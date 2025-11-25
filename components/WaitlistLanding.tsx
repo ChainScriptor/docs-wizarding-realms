@@ -24,14 +24,14 @@ export default function WaitlistLanding() {
   if (showStory) {
     return (
       <div
-        className="relative h-screen w-full overflow-hidden"
+        className="relative min-h-screen w-full overflow-x-hidden sm:overflow-hidden"
         style={{ background: fireSphereBackground }}
       >
         {/* Private Access Banner */}
         <PrivateAccessBanner />
 
         {/* Navigation Links */}
-        <div className="fixed top-[80px] left-0 right-0 z-50 px-4 md:px-8">
+        <div className="fixed top-[88px] sm:top-[96px] md:top-[104px] left-0 right-0 z-40 px-4 md:px-8">
           <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
             <button
               onClick={() => setShowStory(false)}
@@ -56,14 +56,16 @@ export default function WaitlistLanding() {
             </button>
           </div>
         </div>
-        <WizardingStory />
+        <div className="pt-[180px] sm:pt-[200px]">
+          <WizardingStory />
+        </div>
       </div>
     );
   }
 
   return (
     <div
-      className="relative flex h-screen w-full flex-col overflow-hidden"
+      className="relative flex min-h-screen w-full flex-col overflow-x-hidden sm:overflow-hidden"
       style={{ background: fireSphereBackground }}
     >
       {/* Private Access Banner */}
@@ -71,13 +73,13 @@ export default function WaitlistLanding() {
 
 
       {/* Fire Sphere Background */}
-      <div className="absolute inset-0 z-0 -translate-y-[420px] sm:-translate-y-48 lg:-translate-y-56">
+      <div className="absolute inset-0 z-0 hidden sm:block sm:-translate-y-48 lg:-translate-y-56">
         <FireSphere className="h-full w-full opacity-100" />
       </div>
 
 
       {/* Navigation Links */}
-      <div className="fixed top-[80px] left-0 right-0 z-50 px-4 md:px-8">
+      <div className="fixed top-[88px] sm:top-[96px] md:top-[104px] left-0 right-0 z-40 px-4 md:px-8">
         <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
           <button
             onClick={() => setShowStory(false)}
@@ -106,10 +108,10 @@ export default function WaitlistLanding() {
       </div>
 
       {/* Content Overlay - Positioned at top */}
-      <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-4 pt-28 md:pt-32" style={{ mixBlendMode: 'normal' }}>
-        <div className="w-full max-w-3xl mx-auto text-center space-y-8">
+      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-16 pt-[200px] sm:pt-[220px]" style={{ mixBlendMode: 'normal' }}>
+        <div className="w-full max-w-4xl mx-auto text-center space-y-10">
           {/* Title with animated familiars */}
-          <div className="relative mb-8 flex w-full max-w-[125rem] justify-center">
+          <div className="relative mb-10 hidden w-full max-w-[960px] justify-center px-4 sm:flex">
             <Image
               src="/hero1.svg"
               alt="Wizarding Realms"
@@ -120,7 +122,7 @@ export default function WaitlistLanding() {
             />
 
             {/* Left familiars */}
-            <div className="pointer-events-none absolute -left-80 top-4 hidden flex-col gap-20 md:flex">
+            <div className="pointer-events-none absolute -left-10 -top-12 hidden flex-col gap-12 lg:-left-48 lg:top-4 lg:gap-20 md:flex">
               <Image
                 src="/wizard.gif"
                 alt="Arcane familiar"
@@ -142,7 +144,7 @@ export default function WaitlistLanding() {
             </div>
 
             {/* Right familiars */}
-            <div className="pointer-events-none absolute -right-80 -top-24 hidden flex-col gap-20 md:flex items-end">
+            <div className="pointer-events-none absolute -right-10 -top-16 hidden flex-col gap-12 lg:-right-48 lg:-top-24 lg:gap-20 md:flex items-end">
               <Image
                 src="/archon.gif"
                 alt="Mythical steed"
@@ -164,7 +166,7 @@ export default function WaitlistLanding() {
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-start gap-10 text-left">
+          <div className="flex flex-col lg:flex-row items-start gap-10 text-left w-full">
             <div
               className="flex-1 space-y-6 text-lg md:text-xl text-white leading-relaxed text-center lg:text-left"
               style={{
