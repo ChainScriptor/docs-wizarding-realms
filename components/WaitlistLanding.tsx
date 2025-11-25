@@ -108,77 +108,8 @@ export default function WaitlistLanding() {
       </div>
 
       {/* Content Overlay - Positioned at top */}
-      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-16 pt-[200px] sm:pt-[220px]" style={{ mixBlendMode: 'normal' }}>
+      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-16 pt-[120px] sm:pt-[140px]" style={{ mixBlendMode: 'normal' }}>
         <div className="w-full max-w-4xl mx-auto text-center space-y-10">
-          {/* Title with animated familiars */}
-          <div className="relative mb-10 -mt-16 sm:-mt-20 hidden w-full max-w-[860px] justify-center px-4 sm:flex">
-            <Image
-              src="/hero1.svg"
-              alt="Wizarding Realms"
-              width={950}
-              height={200}
-              className="w-1/2 h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
-              priority
-            />
-
-            {/* Left familiars */}
-            <div className="pointer-events-none absolute -left-20 -top-12 hidden flex-col gap-12 lg:-left-64 lg:top-4 lg:gap-20 md:flex">
-              <Image
-                src="/wizard.gif"
-                alt="Arcane familiar"
-                width={110}
-                height={110}
-                className="w-32 h-32 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
-                unoptimized
-                priority
-              />
-              <Image
-                src="/horse.gif"
-                alt="Arcane familiar"
-                width={110}
-                height={110}
-                className="w-36 h-36 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] rotate-3"
-                unoptimized
-                priority
-              />
-            </div>
-
-            {/* Right familiars */}
-            <div className="pointer-events-none absolute -right-20 -top-16 hidden flex-col gap-12 lg:-right-64 lg:-top-24 lg:gap-20 md:flex items-end">
-              <Image
-                src="/archon.gif"
-                alt="Mythical steed"
-                width={360}
-                height={120}
-                className="w-40 h-40 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
-                unoptimized
-                priority
-              />
-              <Image
-                src="/wizard2.gif"
-                alt="Archon sentinel"
-                width={120}
-                height={120}
-                className="w-36 h-36 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] -rotate-6"
-                unoptimized
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Mobile familiar highlight */}
-          <div className="flex sm:hidden items-center justify-center -mt-8 mb-6">
-            <Image
-              src="/horse.gif"
-              alt="Arcane familiar"
-              width={120}
-              height={120}
-              className="w-32 h-32 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
-              unoptimized
-              priority
-            />
-          </div>
-
           <div className="flex flex-col lg:flex-row items-start gap-10 text-left w-full">
             <div
               className="flex-1 space-y-6 text-lg md:text-xl text-white leading-relaxed text-center lg:text-left"
