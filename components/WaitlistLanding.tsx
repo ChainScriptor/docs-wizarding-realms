@@ -3,7 +3,6 @@
 import type { SVGProps } from "react";
 import { useState } from "react";
 import Image from "next/image";
-import { FireSphere } from "@/components/ui/fire-sphere";
 import { Button } from "@/components/ui/button";
 import PrivateAccessBanner from "@/components/PrivateAccessBanner";
 import WizardingStory from "@/components/WizardingStory";
@@ -72,16 +71,6 @@ export default function WaitlistLanding() {
       <PrivateAccessBanner />
 
 
-      {/* Fire Sphere Background */}
-      <div className="absolute inset-0 z-0 hidden sm:block sm:-translate-y-72 lg:-translate-y-40 sm:translate-x-20 lg:translate-x-32">
-        <FireSphere
-          color1={[0, 0, 0]}
-          color0={[220, 120, 40]}
-          className="h-full w-full opacity-100 scale-[0.78] lg:scale-[0.82] origin-top-left"
-        />
-      </div>
-
-
       {/* Navigation Links */}
       <div className="absolute top-[56px] left-0 right-0 z-40 px-4 md:px-8">
         <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
@@ -128,18 +117,27 @@ export default function WaitlistLanding() {
               alt="Wizarding Realms"
               width={850}
               height={200}
-              className="w-[45%] h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] translate-x-[-20px]"
+              className="h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] translate-x-[-20px]"
+              style={{ width: "clamp(260px, 30vw, 520px)" }}
               priority
             />
 
             {/* Left familiars */}
-            <div className="pointer-events-none absolute -left-20 -top-12 hidden flex-col gap-12 lg:-left-64 lg:top-4 lg:gap-20 md:flex">
+            <div
+              className="pointer-events-none absolute hidden flex-col md:flex"
+              style={{
+                left: "clamp(-260px, -16vw, -80px)",
+                top: "clamp(-60px, -6vh, 28px)",
+                gap: "clamp(32px, 5vw, 140px)",
+              }}
+            >
               <Image
                 src="/wizard.gif"
                 alt="Arcane familiar"
                 width={110}
                 height={110}
-                className="w-44 h-44 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+                className="h-auto object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+                style={{ width: "clamp(120px, 11vw, 210px)" }}
                 unoptimized
                 priority
               />
@@ -148,20 +146,29 @@ export default function WaitlistLanding() {
                 alt="Arcane familiar"
                 width={110}
                 height={110}
-                className="w-52 h-52 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] rotate-3"
+                className="h-auto object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] rotate-3"
+                style={{ width: "clamp(140px, 13vw, 260px)" }}
                 unoptimized
                 priority
               />
             </div>
 
             {/* Right familiars */}
-            <div className="pointer-events-none absolute -right-20 -top-10 hidden flex-col gap-12 lg:-right-64 lg:-top-12 lg:gap-20 md:flex items-end">
+            <div
+              className="pointer-events-none absolute hidden flex-col items-end md:flex"
+              style={{
+                right: "clamp(-260px, -16vw, -80px)",
+                top: "clamp(-80px, -8vh, 16px)",
+                gap: "clamp(32px, 5vw, 140px)",
+              }}
+            >
               <Image
                 src="/archon.gif"
                 alt="Mythical steed"
                 width={360}
                 height={120}
-                className="w-48 h-48 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+                className="h-auto object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+                style={{ width: "clamp(140px, 12vw, 240px)" }}
                 unoptimized
                 priority
               />
@@ -216,7 +223,8 @@ export default function WaitlistLanding() {
               alt="Arcane familiar"
               width={120}
               height={120}
-              className="w-48 h-48 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+              className="h-auto object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+              style={{ width: "clamp(160px, 45vw, 240px)" }}
               unoptimized
               priority
             />
@@ -317,7 +325,8 @@ export default function WaitlistLanding() {
                 alt="Archon sentinel"
                 width={120}
                 height={120}
-                className="w-60 h-60 object-contain drop-shadow-[0_0_55px_rgba(255,255,255,0.95)] -rotate-6 translate-y-10 -translate-x-16"
+                className="h-auto object-contain drop-shadow-[0_0_55px_rgba(255,255,255,0.95)] -rotate-6 translate-y-10 -translate-x-16"
+                style={{ width: "clamp(150px, 13vw, 280px)" }}
                 unoptimized
                 priority
               />
