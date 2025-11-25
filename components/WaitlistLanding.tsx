@@ -31,7 +31,7 @@ export default function WaitlistLanding() {
         <PrivateAccessBanner />
 
         {/* Navigation Links */}
-        <div className="fixed top-[56px] left-0 right-0 z-40 px-4 md:px-8">
+        <div className="absolute top-[56px] left-0 right-0 z-40 px-4 md:px-8">
           <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
             <button
               onClick={() => setShowStory(false)}
@@ -79,7 +79,7 @@ export default function WaitlistLanding() {
 
 
       {/* Navigation Links */}
-      <div className="fixed top-[56px] left-0 right-0 z-40 px-4 md:px-8">
+      <div className="absolute top-[56px] left-0 right-0 z-40 px-4 md:px-8">
         <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
           <button
             onClick={() => setShowStory(false)}
