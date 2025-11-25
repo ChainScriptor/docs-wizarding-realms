@@ -109,7 +109,64 @@ export default function WaitlistLanding() {
 
       {/* Content Overlay - Positioned at top */}
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-16 pt-[120px] sm:pt-[140px]" style={{ mixBlendMode: 'normal' }}>
-        <div className="w-full max-w-4xl mx-auto text-center space-y-10">
+        <div className="relative w-full max-w-4xl mx-auto text-center space-y-10">
+          {/* Left familiars - Desktop */}
+          <div className="pointer-events-none absolute -left-20 -top-12 hidden flex-col gap-12 lg:-left-64 lg:top-4 lg:gap-20 md:flex">
+            <Image
+              src="/wizard.gif"
+              alt="Arcane familiar"
+              width={110}
+              height={110}
+              className="w-48 h-48 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+              unoptimized
+              priority
+            />
+            <Image
+              src="/horse.gif"
+              alt="Arcane familiar"
+              width={110}
+              height={110}
+              className="w-56 h-56 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] rotate-3"
+              unoptimized
+              priority
+            />
+          </div>
+
+          {/* Right familiars - Desktop */}
+          <div className="pointer-events-none absolute -right-20 -top-16 hidden flex-col gap-12 lg:-right-64 lg:-top-24 lg:gap-20 md:flex items-end">
+            <Image
+              src="/archon.gif"
+              alt="Mythical steed"
+              width={360}
+              height={120}
+              className="w-64 h-64 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+              unoptimized
+              priority
+            />
+            <Image
+              src="/wizard2.gif"
+              alt="Archon sentinel"
+              width={120}
+              height={120}
+              className="w-56 h-56 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] -rotate-6"
+              unoptimized
+              priority
+            />
+          </div>
+
+          {/* Mobile familiar highlight */}
+          <div className="flex sm:hidden items-center justify-center -mt-8 mb-6">
+            <Image
+              src="/horse.gif"
+              alt="Arcane familiar"
+              width={120}
+              height={120}
+              className="w-48 h-48 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+              unoptimized
+              priority
+            />
+          </div>
+
           <div className="flex flex-col lg:flex-row items-start gap-10 text-left w-full">
             <div
               className="flex-1 space-y-6 text-lg md:text-xl text-white leading-relaxed text-center lg:text-left"
