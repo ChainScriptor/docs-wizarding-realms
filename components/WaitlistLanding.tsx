@@ -168,7 +168,7 @@ export default function WaitlistLanding() {
             </div>
 
             {/* Elevated Early Access card */}
-            <div className="absolute hidden md:block top-[46%] right-[-140px] lg:right-[-200px] xl:right-[-260px]">
+            <div className="absolute hidden sm:block top-[46%] right-[-140px] lg:right-[-200px] xl:right-[-260px]">
               <BackgroundGradient className="w-[340px] rounded-3xl bg-black/80 p-6 text-white shadow-[0_20px_60px_rgba(0,0,0,0.45)] space-y-4">
                 <div className="flex items-center gap-3 text-white/80">
                   <Image src="/early.svg" alt="Early access sigil" width={48} height={48} />
@@ -222,7 +222,7 @@ export default function WaitlistLanding() {
             />
           </div>
 
-          <div className="flex flex-col lg:flex-row items-start gap-10 text-left w-full">
+          <div className="flex flex-col sm:flex-row items-start gap-10 text-left w-full">
             <div
               className="flex-1 space-y-6 text-lg md:text-xl text-white leading-relaxed text-center lg:text-left"
               style={{
@@ -270,7 +270,7 @@ export default function WaitlistLanding() {
               </div>
             </div>
 
-            <div className="w-full lg:w-auto lg:max-w-sm md:hidden">
+            <div className="w-full sm:hidden">
               <BackgroundGradient className="rounded-3xl bg-black/80 p-6 text-white space-y-4">
                 <div className="flex items-center gap-3 text-white/80">
                   <Image src="/early.svg" alt="Early access sigil" width={40} height={40} />
@@ -311,7 +311,7 @@ export default function WaitlistLanding() {
               </BackgroundGradient>
             </div>
 
-            <div className="hidden lg:flex flex-1 flex-col items-center justify-end mt-6">
+            <div className="hidden sm:flex flex-1 flex-col items-center justify-end mt-6">
               <Image
                 src="/wizard2.gif"
                 alt="Archon sentinel"
