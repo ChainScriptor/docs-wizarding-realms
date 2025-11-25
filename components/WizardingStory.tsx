@@ -217,15 +217,15 @@ export default function WizardingStory() {
     };
 
     return (
-        <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black px-4 py-10 md:px-10">
+        <div className="relative flex h-dvh items-center justify-center overflow-hidden bg-black px-4 py-6 md:px-10 md:py-10">
             <div className="absolute inset-0 -z-10">
                 <FireSphere className="h-full w-full opacity-80" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/80 to-black" />
             </div>
 
-            <div className="relative w-full max-w-5xl rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl overflow-hidden">
+            <div className="relative flex h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl">
                 <div className="h-1 bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700" />
-                <div className="p-6 md:p-10 space-y-8 text-white">
+                <div className="flex h-full flex-col gap-6 p-6 text-white md:gap-8 md:p-10">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -250,7 +250,7 @@ export default function WizardingStory() {
                     </motion.div>
 
                     <motion.div
-                        className="rounded-3xl border border-white/10 bg-black/30 p-6 md:p-8 max-h-[420px] overflow-y-auto space-y-6 text-base md:text-lg leading-relaxed scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent"
+                        className="flex-1 overflow-y-auto rounded-3xl border border-white/10 bg-black/30 p-5 text-base leading-relaxed scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent md:p-8 md:text-lg md:leading-relaxed"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
@@ -289,7 +289,7 @@ export default function WizardingStory() {
                     </motion.div>
 
                     <motion.div
-                        className="flex flex-col gap-3 items-center "
+                        className="flex flex-col items-center gap-3 pb-1"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}

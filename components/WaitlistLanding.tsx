@@ -73,8 +73,12 @@ export default function WaitlistLanding() {
 
 
       {/* Fire Sphere Background */}
-      <div className="absolute inset-0 z-0 hidden sm:block sm:-translate-y-48 lg:-translate-y-56">
-        <FireSphere className="h-full w-full opacity-100" />
+      <div className="absolute inset-0 z-0 hidden sm:block sm:-translate-y-72 lg:-translate-y-40 sm:translate-x-20 lg:translate-x-32">
+        <FireSphere
+          color1={[0, 0, 0]}
+          color0={[220, 120, 40]}
+          className="h-full w-full opacity-100 scale-[0.78] lg:scale-[0.82] origin-top-left"
+        />
       </div>
 
 
@@ -112,12 +116,21 @@ export default function WaitlistLanding() {
         <div className="w-full max-w-4xl mx-auto text-center space-y-10">
           {/* Title with animated familiars */}
           <div className="relative mb-10 -mt-16 sm:-mt-20 hidden w-full max-w-[860px] justify-center px-4 sm:flex">
+            <div className="pointer-events-none absolute inset-0 -z-10 hidden md:flex items-center justify-center">
+              <div className="h-[420px] w-[420px]">
+                <FireSphere
+                  color1={[0, 0, 0]}
+                  color0={[220, 120, 40]}
+                  className="h-full w-full opacity-90 scale-75 origin-center"
+                />
+              </div>
+            </div>
             <Image
               src="/hero1.svg"
               alt="Wizarding Realms"
-              width={950}
+              width={850}
               height={200}
-              className="w-4/5 h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+              className="w-[45%] h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] translate-x-[-20px]"
               priority
             />
 
@@ -128,7 +141,7 @@ export default function WaitlistLanding() {
                 alt="Arcane familiar"
                 width={110}
                 height={110}
-                className="w-56 h-56 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+                className="w-44 h-44 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
                 unoptimized
                 priority
               />
@@ -137,32 +150,64 @@ export default function WaitlistLanding() {
                 alt="Arcane familiar"
                 width={110}
                 height={110}
-                className="w-64 h-64 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] rotate-3"
+                className="w-52 h-52 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] rotate-3"
                 unoptimized
                 priority
               />
             </div>
 
             {/* Right familiars */}
-            <div className="pointer-events-none absolute -right-20 -top-16 hidden flex-col gap-12 lg:-right-64 lg:-top-24 lg:gap-20 md:flex items-end">
+            <div className="pointer-events-none absolute -right-20 -top-10 hidden flex-col gap-12 lg:-right-64 lg:-top-12 lg:gap-20 md:flex items-end">
               <Image
                 src="/archon.gif"
                 alt="Mythical steed"
                 width={360}
                 height={120}
-                className="w-80 h-80 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+                className="w-48 h-48 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
                 unoptimized
                 priority
               />
-              <Image
-                src="/wizard2.gif"
-                alt="Archon sentinel"
-                width={120}
-                height={120}
-                className="w-64 h-64 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)] -rotate-6"
-                unoptimized
-                priority
-              />
+            </div>
+
+            {/* Elevated Early Access card */}
+            <div className="absolute hidden md:block top-[46%] right-[-140px] lg:right-[-200px] xl:right-[-260px]">
+              <BackgroundGradient className="w-[340px] rounded-3xl bg-black/80 p-6 text-white shadow-[0_20px_60px_rgba(0,0,0,0.45)] space-y-4">
+                <div className="flex items-center gap-3 text-white/80">
+                  <Image src="/early.svg" alt="Early access sigil" width={48} height={48} />
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-white/60">Early Access</p>
+                    <p className="text-xs text-white/70">Summon your invitation</p>
+                  </div>
+                </div>
+                <p className="text-base font-semibold">
+                  Join our Discord server to get the exclusive Early Birds role for Wizarding Realms!
+                </p>
+                <p className="text-xs text-white/70 italic">
+                  Unlock special perks — click the invite link now and say WIZARD in the server to claim your badge.
+                </p>
+                <div className="text-[11px] text-white/80">
+                  Enter your email • Join the waitlist • Guard your chosen realm.
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Button
+                    asChild
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm"
+                  >
+                    <a href="https://discord.gg/Dj6B4Zzpn" target="_blank" rel="noreferrer">
+                      Join the Discord
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full border-white/40 text-white text-sm hover:bg-white/10"
+                  >
+                    <a href="https://x.com/wizardingrealms?s=11" target="_blank" rel="noreferrer">
+                      Join the X
+                    </a>
+                  </Button>
+                </div>
+              </BackgroundGradient>
             </div>
           </div>
 
@@ -227,7 +272,7 @@ export default function WaitlistLanding() {
               </div>
             </div>
 
-            <div className="w-full lg:w-auto lg:max-w-sm">
+            <div className="w-full lg:w-auto lg:max-w-sm md:hidden">
               <BackgroundGradient className="rounded-3xl bg-black/80 p-6 text-white space-y-4">
                 <div className="flex items-center gap-3 text-white/80">
                   <Image src="/early.svg" alt="Early access sigil" width={40} height={40} />
@@ -266,6 +311,18 @@ export default function WaitlistLanding() {
                   </Button>
                 </div>
               </BackgroundGradient>
+            </div>
+
+            <div className="hidden lg:flex flex-1 flex-col items-center justify-end mt-6">
+              <Image
+                src="/wizard2.gif"
+                alt="Archon sentinel"
+                width={120}
+                height={120}
+                className="w-60 h-60 object-contain drop-shadow-[0_0_55px_rgba(255,255,255,0.95)] -rotate-6 translate-y-10 -translate-x-16"
+                unoptimized
+                priority
+              />
             </div>
           </div>
         </div>

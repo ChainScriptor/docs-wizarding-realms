@@ -135,6 +135,7 @@ function FireSphere({
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(width, height);
+    renderer.setClearColor(0x000000, 1);
     mountRef.current.appendChild(renderer.domElement);
 
     const composer = new EffectComposer(renderer);
