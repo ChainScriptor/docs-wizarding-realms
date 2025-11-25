@@ -306,7 +306,6 @@ export default function WizardingStory() {
                             <span className="absolute inset-0 bg-white/20 opacity-0 transition group-hover:opacity-100" />
                         </Button>
                         {status && <p className="text-sm italic text-white/70">{status}</p>}
-                        <audio ref={audioRef} src="/hexagon_chronicle.wav" className="hidden" preload="auto" />
                     </motion.div>
                 </div>
             </div>
