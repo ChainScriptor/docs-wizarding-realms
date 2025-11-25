@@ -166,6 +166,19 @@ export default function WaitlistLanding() {
             </div>
           </div>
 
+          {/* Mobile familiar highlight */}
+          <div className="flex sm:hidden items-center justify-center -mt-8 mb-6">
+            <Image
+              src="/horse.gif"
+              alt="Arcane familiar"
+              width={120}
+              height={120}
+              className="w-48 h-48 object-contain drop-shadow-[0_0_45px_rgba(255,255,255,0.9)]"
+              unoptimized
+              priority
+            />
+          </div>
+
           <div className="flex flex-col lg:flex-row items-start gap-10 text-left w-full">
             <div
               className="flex-1 space-y-6 text-lg md:text-xl text-white leading-relaxed text-center lg:text-left"
@@ -179,7 +192,7 @@ export default function WaitlistLanding() {
               <div className="space-y-6">
                 <p className="italic">The owls are already flying.</p>
 
-                <p className="font-semibold text-red-400">
+                <p className="font-semibold text-indigo-400">
                   The list closes when the moon turns red.
                 </p>
 
@@ -198,7 +211,8 @@ export default function WaitlistLanding() {
                     asChild
                     variant="destructive"
                     size="lg"
-                    className="w-full sm:w-auto px-8 py-6 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(220,38,38,0.6)]"
+                    className="w-full sm:w-auto px-8 py-6 bg-indigo-600 hover:bg-indigo-800 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(79,70,229,0.6)]
+"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     <a
