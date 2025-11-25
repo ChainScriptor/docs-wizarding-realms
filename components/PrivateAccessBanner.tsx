@@ -4,7 +4,7 @@
 
 export default function PrivateAccessBanner() {
   return (
-    <div className="fixed top-0 left-0 w-full bg-red-600/90 backdrop-blur-md text-white py-3 px-4 text-center text-sm font-medium z-50">
+    <div className="fixed top-0 left-0 w-full bg-indigo-600 backdrop-blur-md text-white py-3 px-4 text-center text-sm font-medium z-50">
       <p className="text-white">
         We are currently in Private Access.{" "}
         <a
