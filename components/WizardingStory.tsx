@@ -296,7 +296,7 @@ export default function WizardingStory() {
                     >
                         <Button
                             onClick={handleNarrationToggle}
-                            className="from-indigo-500 to-indigo-700 px-10 py-4 text-lg font-semibold text-black shadow-[0_0_30px_rgba(79,70,229,0.6)] transition hover:scale-105"
+                            className="from-indigo-500 to-indigo-700 bg-indigo-600 px-10 py-4 text-lg font-semibold text-white shadow-[0_0_30px_rgba(79,70,229,0.6)] transition hover:bg-indigo-800 hover:scale-105"
                             style={{ fontFamily: "var(--font-body)" }}
                         >
                             <span className="relative z-10 flex items-center gap-3">
@@ -305,7 +305,7 @@ export default function WizardingStory() {
                             </span>
                             <span className="absolute inset-0 bg-white/20 opacity-0 transition group-hover:opacity-100" />
                         </Button>
-                        {status && <p className="text-sm italic text-white/70">{status}</p>}
+                        {status && <p className="text-sm italic text-indigo-400">{status}</p>}
                     </motion.div>
                 </div>
             </div>
