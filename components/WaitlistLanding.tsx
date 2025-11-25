@@ -65,7 +65,7 @@ export default function WaitlistLanding() {
 
   return (
     <div
-      className="relative flex min-h-screen w-full flex-col overflow-x-hidden sm:overflow-hidden"
+      className="relative flex min-h-dvh w-full flex-col overflow-x-hidden sm:overflow-hidden"
       style={{ background: fireSphereBackground }}
     >
       {/* Private Access Banner */}
@@ -112,7 +112,14 @@ export default function WaitlistLanding() {
       </div>
 
       {/* Content Overlay - Positioned at top */}
-      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-16 pt-[200px] sm:pt-[220px]" style={{ mixBlendMode: 'normal' }}>
+      <div
+        className="relative z-10 flex flex-1 flex-col items-center px-4"
+        style={{
+          mixBlendMode: "normal",
+          paddingTop: "clamp(140px, 18vh, 240px)",
+          paddingBottom: "clamp(48px, 10vh, 120px)",
+        }}
+      >
         <div className="w-full max-w-4xl mx-auto text-center space-y-10">
           {/* Title with animated familiars */}
           <div className="relative mb-10 -mt-16 sm:-mt-20 hidden w-full max-w-[860px] justify-center px-4 sm:flex">
