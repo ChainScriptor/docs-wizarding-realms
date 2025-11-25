@@ -111,7 +111,7 @@ export default function WaitlistLanding() {
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-16 pt-[200px] sm:pt-[220px]" style={{ mixBlendMode: 'normal' }}>
         <div className="w-full max-w-4xl mx-auto text-center space-y-10">
           {/* Title with animated familiars */}
-          <div className="relative mb-10 -mt-4 sm:-mt-8 hidden w-full max-w-[860px] justify-center px-4 sm:flex">
+          <div className="relative mb-10 -mt-16 sm:-mt-20 hidden w-full max-w-[860px] justify-center px-4 sm:flex">
             <Image
               src="/hero1.svg"
               alt="Wizarding Realms"
