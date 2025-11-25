@@ -116,15 +116,6 @@ export default function WaitlistLanding() {
         <div className="w-full max-w-4xl mx-auto text-center space-y-10">
           {/* Title with animated familiars */}
           <div className="relative mb-10 -mt-16 sm:-mt-20 hidden w-full max-w-[860px] justify-center px-4 sm:flex">
-            <div className="pointer-events-none absolute inset-0 -z-10 hidden md:flex items-center justify-center">
-              <div className="h-[420px] w-[420px]">
-                <FireSphere
-                  color1={[0, 0, 0]}
-                  color0={[220, 120, 40]}
-                  className="h-full w-full opacity-90 scale-75 origin-center"
-                />
-              </div>
-            </div>
             <Image
               src="/hero1.svg"
               alt="Wizarding Realms"
