@@ -31,7 +31,7 @@ export default function WaitlistLanding() {
         <PrivateAccessBanner />
 
         {/* Navigation Links */}
-        <div className="fixed top-[88px] sm:top-[96px] md:top-[104px] left-0 right-0 z-40 px-4 md:px-8">
+        <div className="fixed top-[56px] left-0 right-0 z-40 px-4 md:px-8">
           <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
             <button
               onClick={() => setShowStory(false)}
@@ -79,7 +79,7 @@ export default function WaitlistLanding() {
 
 
       {/* Navigation Links */}
-      <div className="fixed top-[88px] sm:top-[96px] md:top-[104px] left-0 right-0 z-40 px-4 md:px-8">
+      <div className="fixed top-[56px] left-0 right-0 z-40 px-4 md:px-8">
         <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
           <button
             onClick={() => setShowStory(false)}
@@ -111,18 +111,18 @@ export default function WaitlistLanding() {
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-16 pt-[200px] sm:pt-[220px]" style={{ mixBlendMode: 'normal' }}>
         <div className="w-full max-w-4xl mx-auto text-center space-y-10">
           {/* Title with animated familiars */}
-          <div className="relative mb-10 hidden w-full max-w-[960px] justify-center px-4 sm:flex">
+          <div className="relative mb-10 -mt-4 sm:-mt-8 hidden w-full max-w-[860px] justify-center px-4 sm:flex">
             <Image
               src="/hero1.svg"
               alt="Wizarding Realms"
               width={950}
               height={200}
-              className="w-full h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+              className="w-4/5 h-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
               priority
             />
 
             {/* Left familiars */}
-            <div className="pointer-events-none absolute -left-10 -top-12 hidden flex-col gap-12 lg:-left-48 lg:top-4 lg:gap-20 md:flex">
+            <div className="pointer-events-none absolute -left-20 -top-12 hidden flex-col gap-12 lg:-left-64 lg:top-4 lg:gap-20 md:flex">
               <Image
                 src="/wizard.gif"
                 alt="Arcane familiar"
@@ -144,7 +144,7 @@ export default function WaitlistLanding() {
             </div>
 
             {/* Right familiars */}
-            <div className="pointer-events-none absolute -right-10 -top-16 hidden flex-col gap-12 lg:-right-48 lg:-top-24 lg:gap-20 md:flex items-end">
+            <div className="pointer-events-none absolute -right-20 -top-16 hidden flex-col gap-12 lg:-right-64 lg:-top-24 lg:gap-20 md:flex items-end">
               <Image
                 src="/archon.gif"
                 alt="Mythical steed"
