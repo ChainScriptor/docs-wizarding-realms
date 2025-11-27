@@ -83,7 +83,7 @@ export default function WaitlistLanding() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-0 sm:px-4" style={scaledStyle}>
           {/* Navigation Links */}
-          <div className="absolute top-[56px] left-0 right-0 z-40 px-4 md:px-8">
+          <div className="absolute top-[56px] left-0 right-0 z-40 px-4 md:px-8 hidden min-[400px]:block">
             <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
               <button
                 onClick={() => setShowStory(false)}
@@ -126,7 +126,7 @@ export default function WaitlistLanding() {
 
       <div className="relative z-10 flex w-full flex-1 flex-col items-center px-0 sm:max-w-6xl sm:mx-auto sm:px-4 pb-4 pt-6 sm:pt-10" style={scaledStyle}>
         {/* Navigation Links */}
-        <div className="absolute top-[64px] left-0 right-0 z-40 px-2 sm:px-4 md:px-8">
+        <div className="absolute top-[64px] left-0 right-0 z-40 px-2 sm:px-4 md:px-8 hidden min-[400px]:block">
           <div className="flex items-center justify-center gap-2 sm:gap-4 bg-black/40 backdrop-blur-md px-3 sm:px-5 py-2 sm:py-3 rounded-lg border border-white/10 w-full sm:max-w-3xl sm:mx-auto">
             <button
               onClick={() => setShowStory(false)}
