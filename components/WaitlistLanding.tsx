@@ -81,9 +81,9 @@ export default function WaitlistLanding() {
         {/* Private Access Banner - Full width, outside scaled container */}
         <PrivateAccessBanner />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 pb-16 pt-6 sm:pt-10" style={scaledStyle}>
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4" style={scaledStyle}>
           {/* Navigation Links */}
-          <div className="absolute top-[56px] left-0 right-0 z-40 px-4 md:px-8">
+          <div className="absolute top-[48px] left-0 right-0 z-40 px-4 md:px-8">
             <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
               <button
                 onClick={() => setShowStory(false)}
@@ -108,46 +108,10 @@ export default function WaitlistLanding() {
               </button>
             </div>
           </div>
-          <div className="w-full pt-28 sm:pt-12">
+          <div className="w-full mt-[120px] sm:mt-[104px]">
             <WizardingStory scale={viewportScale} />
           </div>
         </div>
-
-        {/* Footer - At bottom, full width, visible when scrolled to end */}
-        <footer className="relative z-20 w-full border-t border-white/10 bg-black/50 px-6 py-4 backdrop-blur">
-          <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 text-white/60 text-sm sm:flex-row sm:items-center sm:justify-between">
-            <p>Wizarding Realms is a product of Wizarding Industries © {currentYear}</p>
-            <div className="flex items-center gap-4 text-white/80">
-              <a
-                href="https://x.com/wizardingrealms?s=11"
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:opacity-80"
-              >
-                <span className="sr-only">X</span>
-                <Image src="/x.avif" alt="X" width={16} height={16} className="h-4 w-4 rounded-full" />
-              </a>
-              <a
-                href="https://discord.gg/Dj6B4Zzpn"
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:opacity-80"
-              >
-                <span className="sr-only">Discord</span>
-                <Image src="/discord.jpg" alt="Discord" width={16} height={16} className="h-4 w-4 rounded-full" />
-              </a>
-              <a
-                href="https://www.tiktok.com/@wizardingrealms"
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:opacity-80"
-              >
-                <span className="sr-only">TikTok</span>
-                <TikTokIcon className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
-        </footer>
       </div>
     );
   }
@@ -370,7 +334,7 @@ export default function WaitlistLanding() {
               </div>
               <div className="relative w-full max-w-4xl mx-auto text-center space-y-6">
                 {/* Mobile familiar highlight */}
-                <div className="flex sm:hidden items-center justify-center pt-40 mb-4">
+                <div className="flex sm:hidden items-center justify-center pt-28 mb-4">
                   <Image
                     src="/horse.gif"
                     alt="Arcane familiar"
@@ -504,8 +468,8 @@ export default function WaitlistLanding() {
         </div>
       </div>
 
-      {/* Footer - At bottom, full width, visible when scrolled to end */}
-      <footer className="relative z-20 w-full border-t border-white/10 bg-black/50 px-6 py-4 backdrop-blur">
+      {/* Footer - Fixed at bottom, full width */}
+      <footer className="fixed bottom-0 left-0 right-0 z-20 w-full border-t border-white/10 bg-black/50 px-6 py-4 backdrop-blur">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 text-white/60 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>Wizarding Realms is a product of Wizarding Industries © {currentYear}</p>
           <div className="flex items-center gap-4 text-white/80">
