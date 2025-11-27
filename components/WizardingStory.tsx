@@ -4,13 +4,14 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion } from "framer-motion";
 import { FireSphere } from "@/components/ui/fire-sphere";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 type StoryBlock =
     | { type: "heading"; content: string }
     | { type: "paragraph"; content: React.ReactNode }
     | { type: "list"; intro?: React.ReactNode; items: string[] };
 
-const videoSequence = ["/5.mp4"];
+const videoSequence = ["/5.mp4", "/6.mp4"];
 
 const storyBlocks: StoryBlock[] = [
     {
@@ -121,21 +122,29 @@ function VideoPlayer() {
             const nextPlayer = videoRefs[nextPlayerIndex].current;
             if (!currentPlayer || !nextPlayer) return;
 
-            const newSequenceIndex = (playerSourcesRef.current[playerIndex] + 1) % videoSequence.length;
-            playerSourcesRef.current[nextPlayerIndex] = newSequenceIndex;
+            // Calculate next video index in sequence
+            const currentSequenceIndex = playerSourcesRef.current[playerIndex];
+            const nextSequenceIndex = (currentSequenceIndex + 1) % videoSequence.length;
+            
+            // Update the next player's source index
+            playerSourcesRef.current[nextPlayerIndex] = nextSequenceIndex;
 
             const startNext = () => {
                 nextPlayer.currentTime = 0;
                 nextPlayer.play().catch(() => { });
                 setActivePlayer(nextPlayerIndex);
                 nextPlayer.removeEventListener("canplay", startNext);
-                playerSourcesRef.current[playerIndex] = (newSequenceIndex + 1) % videoSequence.length;
+                
+                // Prepare current player for next video after the one that will play
+                const futureSequenceIndex = (nextSequenceIndex + 1) % videoSequence.length;
+                playerSourcesRef.current[playerIndex] = futureSequenceIndex;
                 currentPlayer.src = "";
                 currentPlayer.load();
             };
 
+            // Load and play next video
             nextPlayer.addEventListener("canplay", startNext, { once: true });
-            nextPlayer.src = videoSequence[newSequenceIndex];
+            nextPlayer.src = videoSequence[nextSequenceIndex];
             nextPlayer.load();
         };
 
@@ -230,7 +239,7 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
 
     return (
         <div
-            className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-black px-4 py-6 md:px-10 md:py-10"
+            className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-black px-4 py-0 md:px-10"
             style={scaleStyle}
         >
             <div className="absolute inset-0 -z-10">
@@ -240,12 +249,12 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
 
             <div className="relative flex h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl">
                 <div className="h-1 bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 flex-shrink-0" />
-                <div className="flex flex-1 flex-col gap-4 p-4 text-white md:gap-6 md:p-6 min-h-0">
+                <div className="flex flex-1 flex-col gap-1.5 p-1.5 text-white md:gap-2 md:p-2 min-h-0">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center space-y-2"
+                        className="text-center"
                     >
                         <p className="text-xs uppercase tracking-[0.3em] text-white/60">Ancient Lore Archive</p>
                         <h1
