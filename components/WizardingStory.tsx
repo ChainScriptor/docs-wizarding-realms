@@ -238,9 +238,9 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/80 to-black" />
             </div>
 
-            <div className="relative flex max-h-[92vh] h-auto w-full max-w-5xl flex-col overflow-hidden rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl">
-                <div className="h-1 bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700" />
-                <div className="flex flex-1 flex-col gap-4 p-4 text-white md:gap-6 md:p-6">
+            <div className="relative flex h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl">
+                <div className="h-1 bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 flex-shrink-0" />
+                <div className="flex flex-1 flex-col gap-4 p-4 text-white md:gap-6 md:p-6 min-h-0">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -256,21 +256,23 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
                         </h1>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        <VideoPlayer />
-                    </motion.div>
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-6 flex-1 min-h-0">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="flex-shrink-0 w-full md:w-1/2 flex items-center"
+                        >
+                            <VideoPlayer />
+                        </motion.div>
 
-                    <motion.div
-                        className="flex-1 overflow-y-auto rounded-3xl border border-white/10 bg-black/30 p-3 text-sm leading-relaxed scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent md:p-5 md:text-base md:leading-relaxed"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.3 }}
-                        style={{ fontFamily: "var(--font-body)" }}
-                    >
+                        <motion.div
+                            className="flex-1 overflow-y-auto rounded-3xl border border-white/10 bg-black/30 p-3 text-sm leading-relaxed scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent md:p-5 md:text-base md:leading-relaxed min-h-0"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            style={{ fontFamily: "var(--font-body)" }}
+                        >
                         {storyBlocks.map((block, idx) => {
                             if (block.type === "heading") {
                                 return (
@@ -301,10 +303,11 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
                                 </p>
                             );
                         })}
-                    </motion.div>
+                        </motion.div>
+                    </div>
 
                     <motion.div
-                        className="flex flex-col items-center gap-2 pb-1"
+                        className="flex flex-col items-center gap-2 pb-1 flex-shrink-0"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
