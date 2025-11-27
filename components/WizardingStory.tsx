@@ -11,7 +11,7 @@ type StoryBlock =
     | { type: "paragraph"; content: React.ReactNode }
     | { type: "list"; intro?: React.ReactNode; items: string[] };
 
-const videoSequence = ["/5.mp4", "/6.mp4"];
+const videoSequence = ["/6.mp4"];
 
 const storyBlocks: StoryBlock[] = [
     {
