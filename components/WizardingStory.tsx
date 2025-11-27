@@ -240,23 +240,23 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
 
             <div className="relative flex h-full sm:h-[calc(100vh-56px)] max-h-full sm:max-h-[calc(100vh-56px)] w-full sm:max-w-6xl sm:mx-auto flex-col overflow-hidden rounded-none sm:rounded-[32px] border-0 sm:border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl">
                 <div className="h-1 bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 flex-shrink-0" />
-                <div className="flex flex-1 flex-col gap-2 p-2 text-white sm:gap-4 sm:p-4 md:gap-6 md:p-6 min-h-0 overflow-hidden">
+                <div className="flex flex-1 flex-col gap-4 p-4 text-white sm:gap-4 sm:p-4 md:gap-6 md:p-6 min-h-0 overflow-hidden">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center space-y-1 sm:space-y-2 flex-shrink-0"
+                        className="text-center space-y-2 flex-shrink-0"
                     >
-                        <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-white/60">Ancient Lore Archive</p>
+                        <p className="text-xs sm:text-xs uppercase tracking-[0.3em] text-white/60">Ancient Lore Archive</p>
                         <h1
-                            className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-indigo-200 drop-shadow-lg"
+                            className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-indigo-200 drop-shadow-lg"
                             style={{ fontFamily: "var(--font-cinzel)" }}
                         >
                             The Wizarding Realms Chronicle
                         </h1>
                     </motion.div>
 
-                    <div className="flex flex-col lg:flex-row gap-2 sm:gap-4 md:gap-6 flex-1 min-h-0 overflow-hidden">
+                    <div className="flex flex-col lg:flex-row gap-4 sm:gap-4 md:gap-6 flex-1 min-h-0 overflow-hidden">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -267,7 +267,7 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
                         </motion.div>
 
                         <motion.div
-                            className="flex-1 overflow-y-auto rounded-xl sm:rounded-3xl border border-white/10 bg-black/30 p-2 text-xs leading-relaxed scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent sm:p-3 sm:text-sm md:p-5 md:text-base md:leading-relaxed min-h-0"
+                            className="flex-1 overflow-y-auto rounded-xl sm:rounded-3xl border border-white/10 bg-black/30 p-4 text-sm leading-relaxed scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent sm:p-3 sm:text-sm md:p-5 md:text-base md:leading-relaxed min-h-0"
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
@@ -278,7 +278,7 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
                                 return (
                                     <h3
                                         key={`heading-${idx}`}
-                                        className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white/90 mt-2 sm:mt-3"
+                                        className="text-xl sm:text-lg md:text-xl lg:text-2xl font-semibold text-white/90 mt-3 sm:mt-3"
                                         style={{ fontFamily: "var(--font-cinzel)" }}
                                     >
                                         {block.content}
@@ -287,9 +287,9 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
                             }
                             if (block.type === "list") {
                                 return (
-                                    <div key={`list-${idx}`} className="space-y-1 sm:space-y-2 text-white/80 mt-2 sm:mt-3">
-                                        {block.intro && <p className="text-xs sm:text-sm md:text-base">{block.intro}</p>}
-                                        <ul className="list-disc space-y-0.5 sm:space-y-1 pl-4 sm:pl-6 text-xs sm:text-sm md:text-base">
+                                    <div key={`list-${idx}`} className="space-y-2 sm:space-y-2 text-white/80 mt-3 sm:mt-3">
+                                        {block.intro && <p className="text-sm sm:text-sm md:text-base">{block.intro}</p>}
+                                        <ul className="list-disc space-y-1 sm:space-y-1 pl-6 sm:pl-6 text-sm sm:text-sm md:text-base">
                                             {block.items.map((item, itemIdx) => (
                                                 <li key={itemIdx}>{item}</li>
                                             ))}
@@ -298,7 +298,7 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
                                 );
                             }
                             return (
-                                <p key={`paragraph-${idx}`} className="text-white/90 text-xs sm:text-sm md:text-base mt-1 sm:mt-2">
+                                <p key={`paragraph-${idx}`} className="text-white/90 text-sm sm:text-sm md:text-base mt-2 sm:mt-2">
                                     {block.content}
                                 </p>
                             );
@@ -307,23 +307,23 @@ export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
                     </div>
 
                     <motion.div
-                        className="flex flex-col items-center gap-1 sm:gap-2 pb-0.5 sm:pb-1 flex-shrink-0"
+                        className="flex flex-col items-center gap-2 pb-1 flex-shrink-0"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
                         <Button
                             onClick={handleNarrationToggle}
-                            className="from-indigo-500 to-indigo-700 bg-indigo-600 px-4 py-1.5 text-xs font-semibold text-white shadow-[0_0_30px_rgba(79,70,229,0.6)] transition hover:bg-indigo-800 hover:scale-105 sm:px-6 sm:py-2.5 sm:text-sm md:px-8 md:py-3 md:text-base"
+                            className="from-indigo-500 to-indigo-700 bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(79,70,229,0.6)] transition hover:bg-indigo-800 hover:scale-105 sm:px-6 sm:py-2.5 sm:text-sm md:px-8 md:py-3 md:text-base"
                             style={{ fontFamily: "var(--font-body)" }}
                         >
-                            <span className="relative z-10 flex items-center gap-2 sm:gap-3">
-                                <span className={`inline-block h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full ${isPlaying ? "bg-emerald-300 animate-pulse" : "bg-white"}`} />
-                                <span className="text-[10px] sm:text-xs md:text-sm">{isPlaying ? "Stop the Chronicle" : "Listen to the Chronicle"}</span>
+                            <span className="relative z-10 flex items-center gap-3">
+                                <span className={`inline-block h-2 w-2 rounded-full ${isPlaying ? "bg-emerald-300 animate-pulse" : "bg-white"}`} />
+                                <span className="text-sm sm:text-xs md:text-sm">{isPlaying ? "Stop the Chronicle" : "Listen to the Chronicle"}</span>
                             </span>
                             <span className="absolute inset-0 bg-white/20 opacity-0 transition group-hover:opacity-100" />
                         </Button>
-                        {status && <p className="text-[10px] sm:text-xs md:text-sm italic text-indigo-400">{status}</p>}
+                        {status && <p className="text-sm sm:text-xs md:text-sm italic text-indigo-400">{status}</p>}
                     </motion.div>
                 </div>
             </div>

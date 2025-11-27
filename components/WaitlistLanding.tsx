@@ -81,9 +81,9 @@ export default function WaitlistLanding() {
         {/* Private Access Banner - Full width, outside scaled container */}
         <PrivateAccessBanner />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4" style={scaledStyle}>
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-0 sm:px-4" style={scaledStyle}>
           {/* Navigation Links */}
-          <div className="absolute top-[48px] left-0 right-0 z-40 px-4 md:px-8">
+          <div className="absolute top-[56px] left-0 right-0 z-40 px-4 md:px-8">
             <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
               <button
                 onClick={() => setShowStory(false)}
@@ -124,9 +124,9 @@ export default function WaitlistLanding() {
       {/* Private Access Banner - Full width, outside scaled container */}
       <PrivateAccessBanner />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center px-4 pb-16 pt-6 sm:pt-10" style={scaledStyle}>
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center px-0 sm:px-4 pb-16 pt-6 sm:pt-10" style={scaledStyle}>
         {/* Navigation Links */}
-        <div className="absolute top-[56px] left-0 right-0 z-40 px-4 md:px-8">
+        <div className="absolute top-[64px] left-0 right-0 z-40 px-4 md:px-8">
           <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
             <button
               onClick={() => setShowStory(false)}
@@ -184,7 +184,7 @@ export default function WaitlistLanding() {
 
         {/* Content Overlay - Positioned at top */}
         <div
-          className={`relative z-10 flex flex-1 w-full ${isWideLayout ? 'flex-row items-start gap-6' : 'flex-col items-center'} px-4 pb-20 ${isWideLayout ? 'pt-2' : '-mt-4 sm:-mt-8'}`}
+          className={`relative z-10 flex flex-1 w-full ${isWideLayout ? 'flex-row items-start gap-6' : 'flex-col items-center'} px-0 sm:px-4 pb-20 ${isWideLayout ? 'pt-2' : '-mt-4 sm:-mt-8'}`}
           style={{
             mixBlendMode: "normal",
           }}
@@ -277,7 +277,7 @@ export default function WaitlistLanding() {
                   </div>
                 </div>
 
-                <div className="w-full lg:w-auto lg:max-w-xs flex-shrink-0">
+                <div className="w-full lg:w-auto lg:max-w-xs flex-shrink-0 px-0 sm:px-0">
                   <BackgroundGradient className="rounded-2xl bg-black/80 p-3 md:p-4 text-white space-y-2 md:space-y-3">
                     <div className="flex items-center gap-2 text-white/80">
                       <Image src="/early.svg" alt="Early access sigil" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8" />
@@ -332,15 +332,15 @@ export default function WaitlistLanding() {
                   />
                 </div>
               </div>
-              <div className="relative w-full max-w-4xl mx-auto text-center space-y-6">
+              <div className="relative w-full max-w-4xl sm:mx-auto text-center space-y-6">
                 {/* Mobile familiar highlight */}
-                <div className="flex sm:hidden items-center justify-center pt-28 mb-4">
+                <div className="flex sm:hidden items-center justify-center pt-40 mb-4">
                   <Image
                     src="/horse.gif"
                     alt="Arcane familiar"
-                    width={120}
-                    height={120}
-                    className="w-32 h-32 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
+                    width={300}
+                    height={300}
+                    className="w-64 h-64 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
                     unoptimized
                     priority
                   />
@@ -421,7 +421,7 @@ export default function WaitlistLanding() {
                     </div>
                   </div>
 
-                  <div className="w-full lg:w-auto lg:max-w-xs">
+                  <div className="w-full lg:w-auto lg:max-w-xs px-0 sm:px-0">
                     <BackgroundGradient className="rounded-2xl bg-black/80 p-3 md:p-4 text-white space-y-2 md:space-y-3">
                       <div className="flex items-center gap-2 text-white/80">
                         <Image src="/early.svg" alt="Early access sigil" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8" />
