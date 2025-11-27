@@ -124,13 +124,13 @@ export default function WaitlistLanding() {
       {/* Private Access Banner - Full width, outside scaled container */}
       <PrivateAccessBanner />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center px-0 sm:px-4 pb-16 pt-6 sm:pt-10" style={scaledStyle}>
+      <div className="relative z-10 flex w-full flex-1 flex-col items-center px-0 sm:max-w-6xl sm:mx-auto sm:px-4 pb-4 pt-6 sm:pt-10" style={scaledStyle}>
         {/* Navigation Links */}
-        <div className="absolute top-[64px] left-0 right-0 z-40 px-4 md:px-8">
-          <div className="flex items-center justify-center gap-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 mx-auto w-full max-w-3xl">
+        <div className="absolute top-[64px] left-0 right-0 z-40 px-2 sm:px-4 md:px-8">
+          <div className="flex items-center justify-center gap-2 sm:gap-4 bg-black/40 backdrop-blur-md px-3 sm:px-5 py-2 sm:py-3 rounded-lg border border-white/10 w-full sm:max-w-3xl sm:mx-auto">
             <button
               onClick={() => setShowStory(false)}
-              className="text-sm md:text-base transition-colors duration-200 cursor-pointer"
+              className="text-base md:text-lg transition-colors duration-200 cursor-pointer"
               style={{
                 fontFamily: "var(--font-cinzel)",
                 color: "#FFB84D",
@@ -142,7 +142,7 @@ export default function WaitlistLanding() {
             <div className="h-5 w-px bg-white/20" />
             <button
               onClick={() => setShowStory(true)}
-              className="text-sm md:text-base transition-colors duration-200 cursor-pointer"
+              className="text-base md:text-lg transition-colors duration-200 cursor-pointer"
               style={{
                 fontFamily: "var(--font-cinzel)",
                 color: "#FFB84D",
@@ -184,16 +184,16 @@ export default function WaitlistLanding() {
 
         {/* Content Overlay - Positioned at top */}
         <div
-          className={`relative z-10 flex flex-1 w-full ${isWideLayout ? 'flex-row items-start gap-6' : 'flex-col items-center'} px-0 sm:px-4 pb-20 ${isWideLayout ? 'pt-2' : '-mt-4 sm:-mt-8'}`}
+          className={`relative z-10 flex flex-1 w-full ${isWideLayout ? 'flex-row items-start gap-6' : 'flex-col items-center'} px-0 pb-20 ${isWideLayout ? 'pt-2' : '-mt-4 sm:-mt-8'}`}
           style={{
             mixBlendMode: "normal",
           }}
         >
           {isWideLayout ? (
-            <div className="relative w-full flex flex-col gap-4 px-4">
+            <div className="relative w-full flex flex-col gap-4 px-0 sm:px-4">
               {/* Lightning Text Logo - shown in wide layout */}
               <div className="pointer-events-none relative z-30 mb-0 w-full flex justify-center mt-16">
-                <div className="w-full max-w-4xl h-20 sm:h-24">
+                <div className="w-full h-20 sm:h-24 sm:max-w-4xl">
                   <LightningText
                     text="WIZARDING REALMS"
                     size={50}
@@ -277,8 +277,8 @@ export default function WaitlistLanding() {
                   </div>
                 </div>
 
-                <div className="w-full lg:w-auto lg:max-w-xs flex-shrink-0 px-0 sm:px-0">
-                  <BackgroundGradient className="rounded-2xl bg-black/80 p-3 md:p-4 text-white space-y-2 md:space-y-3">
+                <div className="w-full lg:w-auto lg:max-w-xs flex-shrink-0">
+                  <BackgroundGradient className="rounded-none sm:rounded-2xl bg-black/80 p-4 md:p-4 text-white space-y-2 md:space-y-3">
                     <div className="flex items-center gap-2 text-white/80">
                       <Image src="/early.svg" alt="Early access sigil" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8" />
                       <div>
@@ -323,7 +323,7 @@ export default function WaitlistLanding() {
             <>
               {/* Lightning Text Logo - centered in normal layout */}
               <div className="pointer-events-none relative z-30 mb-0 hidden sm:flex w-full justify-center mt-16 sm:mt-20">
-                <div className="w-full max-w-4xl h-24 sm:h-32">
+                <div className="w-full h-24 sm:h-32 sm:max-w-4xl">
                   <LightningText
                     text="WIZARDING REALMS"
                     size={60}
@@ -332,7 +332,7 @@ export default function WaitlistLanding() {
                   />
                 </div>
               </div>
-              <div className="relative w-full max-w-4xl sm:mx-auto text-center space-y-6">
+              <div className="relative w-full text-center space-y-6 sm:max-w-4xl sm:mx-auto">
                 {/* Mobile familiar highlight */}
                 <div className="flex sm:hidden items-center justify-center pt-40 mb-4">
                   <Image
@@ -348,7 +348,7 @@ export default function WaitlistLanding() {
 
                 <div className="flex flex-col lg:flex-row items-start gap-6 text-left w-full">
                   <div
-                    className="flex-1 space-y-4 text-2xl md:text-3xl text-white leading-relaxed text-center lg:text-left"
+                    className="flex-1 space-y-5 text-3xl md:text-4xl text-white leading-relaxed text-center lg:text-left"
                     style={{
                       fontFamily: "var(--font-body)",
                       textShadow:
@@ -356,7 +356,7 @@ export default function WaitlistLanding() {
                     }}
                   >
                     {/* Main Text - Only selected texts */}
-                    <div className="space-y-4">
+                    <div className="space-y-5">
                       <p className="italic">The owls are already flying.</p>
 
                       <p className="font-semibold text-indigo-400">
@@ -367,18 +367,18 @@ export default function WaitlistLanding() {
                         Write your name below before someone else claims the realm that was meant for you.
                       </p>
 
-                      <p className="text-lg italic text-white/70 pt-1">
+                      <p className="text-xl md:text-2xl italic text-white/70 pt-1">
                         (One realm to rule them all. One token to bind them.)
                       </p>
                     </div>
 
-                    <div className="mt-6 space-y-3">
-                      <div className="flex flex-col sm:flex-row gap-3 items-center justify-center lg:justify-start">
+                    <div className="mt-8 space-y-4">
+                      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
                         <Button
                           asChild
                           variant="destructive"
                           size="lg"
-                          className="w-full sm:w-auto px-6 py-4 bg-indigo-600 hover:bg-indigo-800 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(79,70,229,0.6)]
+                          className="w-full sm:w-auto px-8 py-5 text-lg md:text-xl bg-indigo-600 hover:bg-indigo-800 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(79,70,229,0.6)]
 "
                           style={{ fontFamily: "var(--font-body)" }}
                         >
@@ -421,29 +421,29 @@ export default function WaitlistLanding() {
                     </div>
                   </div>
 
-                  <div className="w-full lg:w-auto lg:max-w-xs px-0 sm:px-0">
-                    <BackgroundGradient className="rounded-2xl bg-black/80 p-3 md:p-4 text-white space-y-2 md:space-y-3">
-                      <div className="flex items-center gap-2 text-white/80">
-                        <Image src="/early.svg" alt="Early access sigil" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8" />
+                  <div className="w-full lg:w-auto lg:max-w-xs">
+                    <BackgroundGradient className="rounded-none sm:rounded-2xl bg-black/80 p-4 md:p-5 text-white space-y-3 md:space-y-4">
+                      <div className="flex items-center gap-3 text-white/80">
+                        <Image src="/early.svg" alt="Early access sigil" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10" />
                         <div>
-                          <p className="text-xs md:text-lg uppercase tracking-[0.2em] text-white/60">Early Access</p>
-                          <p className="text-xs md:text-lg text-white/70">Summon your invitation</p>
+                          <p className="text-sm md:text-xl uppercase tracking-[0.2em] text-white/60">Early Access</p>
+                          <p className="text-sm md:text-xl text-white/70">Summon your invitation</p>
                         </div>
                       </div>
-                      <p className="text-base md:text-2xl font-semibold">
+                      <p className="text-lg md:text-3xl font-semibold">
                         Join our Discord server to get the exclusive Early Birds role for Wizarding Realms!
                       </p>
-                      <p className="text-sm md:text-lg text-white/70 italic">
+                      <p className="text-base md:text-xl text-white/70 italic">
                         Be among the first adventurers and unlock special perks , click the invite link now and say
                         WIZARD in the server to claim your badge.
                       </p>
-                      <div className="pt-1 text-xs md:text-lg text-white/80">
+                      <div className="pt-2 text-sm md:text-xl text-white/80">
                         Enter your email • Join the waitlist • Guard your chosen realm.
                       </div>
-                      <div className="pt-2 flex flex-col sm:flex-row gap-2">
+                      <div className="pt-3 flex flex-col sm:flex-row gap-3">
                         <Button
                           asChild
-                          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm py-2"
+                          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-base md:text-lg py-3"
                         >
                           <a href="https://discord.gg/Dj6B4Zzpn" target="_blank" rel="noreferrer">
                             Join the Discord
@@ -452,7 +452,7 @@ export default function WaitlistLanding() {
                         <Button
                           asChild
                           variant="outline"
-                          className="w-full border-white/40 text-white hover:bg-white/10 text-sm py-2"
+                          className="w-full border-white/40 text-white hover:bg-white/10 text-base md:text-lg py-3"
                         >
                           <a href="https://x.com/wizardingrealms?s=11" target="_blank" rel="noreferrer">
                             Join the X
@@ -468,9 +468,9 @@ export default function WaitlistLanding() {
         </div>
       </div>
 
-      {/* Footer - Fixed at bottom, full width */}
-      <footer className="fixed bottom-0 left-0 right-0 z-20 w-full border-t border-white/10 bg-black/50 px-6 py-4 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 text-white/60 text-sm sm:flex-row sm:items-center sm:justify-between">
+      {/* Footer - At bottom, full width */}
+      <footer className="relative z-20 w-full border-t border-white/10 bg-black/50 px-2 sm:px-6 py-5 backdrop-blur mt-auto">
+        <div className="flex w-full flex-col gap-4 text-white/60 text-base sm:max-w-5xl sm:mx-auto sm:flex-row sm:items-center sm:justify-between">
           <p>Wizarding Realms is a product of Wizarding Industries © {currentYear}</p>
           <div className="flex items-center gap-4 text-white/80">
             <a
