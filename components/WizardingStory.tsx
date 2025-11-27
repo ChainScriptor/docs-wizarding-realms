@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion } from "framer-motion";
 import { FireSphere } from "@/components/ui/fire-sphere";
 import { Button } from "@/components/ui/button";
@@ -171,10 +171,22 @@ function VideoPlayer() {
     );
 }
 
-export default function WizardingStory() {
+type WizardingStoryProps = {
+    scale?: number;
+};
+
+export default function WizardingStory({ scale = 1 }: WizardingStoryProps) {
     const [status, setStatus] = useState("");
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef<HTMLAudioElement | null>(null);
+    const scaleStyle: CSSProperties =
+        scale === 1
+            ? { transition: "transform 200ms ease" }
+            : {
+                transform: `scale(${scale})`,
+                transformOrigin: "top center",
+                transition: "transform 200ms ease",
+            };
 
     useEffect(() => {
         const audio = new Audio("/hexagon_chronicle.wav");
@@ -217,24 +229,27 @@ export default function WizardingStory() {
     };
 
     return (
-        <div className="relative flex h-dvh items-center justify-center overflow-hidden bg-black px-4 py-6 md:px-10 md:py-10">
+        <div
+            className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-black px-4 py-6 md:px-10 md:py-10"
+            style={scaleStyle}
+        >
             <div className="absolute inset-0 -z-10">
                 <FireSphere className="h-full w-full opacity-80" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/80 to-black" />
             </div>
 
-            <div className="relative flex h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl">
+            <div className="relative flex max-h-[92vh] h-auto w-full max-w-5xl flex-col overflow-hidden rounded-[32px] border border-white/10 bg-black/70 shadow-[0_0_60px_rgba(79,70,229,0.25)] backdrop-blur-3xl">
                 <div className="h-1 bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700" />
-                <div className="flex h-full flex-col gap-6 p-6 text-white md:gap-8 md:p-10">
+                <div className="flex flex-1 flex-col gap-4 p-4 text-white md:gap-6 md:p-6">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         className="text-center space-y-2"
                     >
-                        <p className="text-sm uppercase tracking-[0.4em] text-white/60">Ancient Lore Archive</p>
+                        <p className="text-xs uppercase tracking-[0.3em] text-white/60">Ancient Lore Archive</p>
                         <h1
-                            className="text-4xl md:text-5xl font-semibold text-indigo-200 drop-shadow-lg"
+                            className="text-2xl md:text-3xl font-semibold text-indigo-200 drop-shadow-lg"
                             style={{ fontFamily: "var(--font-cinzel)" }}
                         >
                             The Wizarding Realms Chronicle
@@ -250,7 +265,7 @@ export default function WizardingStory() {
                     </motion.div>
 
                     <motion.div
-                        className="flex-1 overflow-y-auto rounded-3xl border border-white/10 bg-black/30 p-5 text-base leading-relaxed scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent md:p-8 md:text-lg md:leading-relaxed"
+                        className="flex-1 overflow-y-auto rounded-3xl border border-white/10 bg-black/30 p-3 text-sm leading-relaxed scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent md:p-5 md:text-base md:leading-relaxed"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
@@ -289,14 +304,14 @@ export default function WizardingStory() {
                     </motion.div>
 
                     <motion.div
-                        className="flex flex-col items-center gap-3 pb-1"
+                        className="flex flex-col items-center gap-2 pb-1"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
                         <Button
                             onClick={handleNarrationToggle}
-                            className="from-indigo-500 to-indigo-700 bg-indigo-600 px-10 py-4 text-lg font-semibold text-white shadow-[0_0_30px_rgba(79,70,229,0.6)] transition hover:bg-indigo-800 hover:scale-105"
+                            className="from-indigo-500 to-indigo-700 bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(79,70,229,0.6)] transition hover:bg-indigo-800 hover:scale-105 md:px-8 md:py-3 md:text-base"
                             style={{ fontFamily: "var(--font-body)" }}
                         >
                             <span className="relative z-10 flex items-center gap-3">
