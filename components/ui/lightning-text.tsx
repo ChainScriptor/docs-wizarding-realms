@@ -33,8 +33,11 @@ class Text {
     this.basedelay = this.delay;
     
     buffer.font = `${this.size}px Comic Sans MS`;
-    this.bound = buffer.measureText(this.copy);
-    this.bound.height = this.size * 1.5;
+    const textMetrics = buffer.measureText(this.copy);
+    this.bound = {
+      width: textMetrics.width,
+      height: this.size * 1.5
+    };
     
     // Center the text
     this.x = canvasWidth * 0.5 - this.bound.width * 0.5;
