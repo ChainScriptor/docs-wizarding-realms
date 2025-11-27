@@ -148,7 +148,7 @@ function VideoPlayer() {
             playerA.onended = null;
             playerB.onended = null;
         };
-    }, []);
+    }, [videoRefs]);
 
     return (
         <div className="relative w-full rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(79,70,229,0.6)] overflow-hidden">

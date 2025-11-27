@@ -18,6 +18,9 @@ class Text {
   constructor(options: { size?: number; copy?: string; color?: string; delay?: number } = {}, canvasWidth: number, canvasHeight: number) {
     const pool = document.createElement('canvas');
     const buffer = pool.getContext('2d');
+    if (!buffer) {
+      throw new Error('Failed to get 2d context from canvas');
+    }
     pool.width = canvasWidth;
     pool.height = canvasHeight;
     buffer.fillStyle = '#000000';
