@@ -113,8 +113,8 @@ export default function WaitlistLanding() {
           </div>
         </div>
 
-        {/* Footer - Fixed at bottom, full width, outside scaled container */}
-        <footer className="fixed bottom-0 left-0 right-0 z-20 w-full border-t border-white/10 bg-black/50 px-6 py-4 backdrop-blur">
+        {/* Footer - At bottom, full width, visible when scrolled to end */}
+        <footer className="relative z-20 w-full border-t border-white/10 bg-black/50 px-6 py-4 backdrop-blur">
           <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 text-white/60 text-sm sm:flex-row sm:items-center sm:justify-between">
             <p>Wizarding Realms is a product of Wizarding Industries © {currentYear}</p>
             <div className="flex items-center gap-4 text-white/80">
@@ -370,7 +370,7 @@ export default function WaitlistLanding() {
               </div>
               <div className="relative w-full max-w-4xl mx-auto text-center space-y-6">
                 {/* Mobile familiar highlight */}
-                <div className="flex sm:hidden items-center justify-center pt-28 mb-4">
+                <div className="flex sm:hidden items-center justify-center pt-40 mb-4">
                   <Image
                     src="/horse.gif"
                     alt="Arcane familiar"
@@ -504,8 +504,8 @@ export default function WaitlistLanding() {
         </div>
       </div>
 
-      {/* Footer - Fixed at bottom, full width */}
-      <footer className="fixed bottom-0 left-0 right-0 z-20 w-full border-t border-white/10 bg-black/50 px-6 py-4 backdrop-blur">
+      {/* Footer - At bottom, full width, visible when scrolled to end */}
+      <footer className="relative z-20 w-full border-t border-white/10 bg-black/50 px-6 py-4 backdrop-blur">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 text-white/60 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>Wizarding Realms is a product of Wizarding Industries © {currentYear}</p>
           <div className="flex items-center gap-4 text-white/80">
