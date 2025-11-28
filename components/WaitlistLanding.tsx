@@ -118,13 +118,13 @@ export default function WaitlistLanding() {
 
   return (
     <div
-      className="relative flex h-screen w-full flex-col overflow-y-auto lg:overflow-hidden"
+      className="relative flex min-h-screen w-full flex-col overflow-y-auto"
       style={{ background: fireSphereBackground }}
     >
       {/* Private Access Banner - Full width, outside scaled container */}
       <PrivateAccessBanner />
 
-      <div className="relative z-10 flex w-full flex-1 flex-col items-center px-0 sm:max-w-6xl sm:mx-auto sm:px-4 pb-4 pt-6 sm:pt-10" style={scaledStyle}>
+      <div className="relative z-10 flex w-full flex-1 flex-col items-center px-0 sm:max-w-6xl sm:mx-auto sm:px-4 pb-2 sm:pb-4 pt-6 sm:pt-10" style={scaledStyle}>
         {/* Navigation Links */}
         <div className="absolute top-[64px] left-0 right-0 z-40 px-2 sm:px-4 md:px-8 hidden min-[400px]:block">
           <div className="flex items-center justify-center gap-2 sm:gap-4 bg-black/40 backdrop-blur-md px-3 sm:px-5 py-2 sm:py-3 rounded-lg border border-white/10 w-full sm:max-w-3xl sm:mx-auto">
@@ -156,7 +156,7 @@ export default function WaitlistLanding() {
 
         {/* Fixed Wizard Gif - Top Left */}
         {windowWidth >= 1225 && (
-          <div className="fixed top-20 left-4 md:left-8 pointer-events-none z-20 hidden sm:block">
+          <div className="absolute top-20 left-4 md:left-8 pointer-events-none z-20 hidden sm:block">
             <Image
               src="/wizard.gif"
               alt="Arcane familiar"
@@ -170,7 +170,7 @@ export default function WaitlistLanding() {
 
         {/* Fixed Archon Gif - Top Right */}
         {windowWidth >= 1225 && (
-          <div className="fixed top-20 right-4 md:right-8 pointer-events-none z-20 hidden sm:block">
+          <div className="absolute top-20 right-0 md:right-1 lg:right-2 xl:right-8 pointer-events-none z-20 hidden sm:block">
             <Image
               src="/archon.gif"
               alt="Mythical steed"
@@ -184,7 +184,7 @@ export default function WaitlistLanding() {
 
         {/* Content Overlay - Positioned at top */}
         <div
-          className={`relative z-10 flex flex-1 w-full ${isWideLayout ? 'flex-row items-start gap-6' : 'flex-col items-center'} px-0 pb-20 ${isWideLayout ? 'pt-2' : '-mt-4 sm:-mt-8'}`}
+          className={`relative z-10 flex flex-1 w-full ${isWideLayout ? 'flex-row items-start gap-6' : 'flex-col items-center'} px-0 pb-12 sm:pb-20 ${isWideLayout ? 'pt-2' : '-mt-4 sm:-mt-8'}`}
           style={{
             mixBlendMode: "normal",
           }}
@@ -256,7 +256,7 @@ export default function WaitlistLanding() {
                         height={150}
                         className="absolute w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)] rotate-3"
                         style={{
-                          left: '10%',
+                          left: '25%',
                           top: '20%',
                         }}
                         unoptimized
@@ -296,7 +296,7 @@ export default function WaitlistLanding() {
                     <div className="pt-1 text-xs md:text-base text-white/80">
                       Enter your email • Join the waitlist • Guard your chosen realm.
                     </div>
-                    <div className="pt-2 flex flex-col sm:flex-row gap-2">
+                    <div className="pt-2 flex flex-col sm:flex-row sm:flex-wrap gap-2">
                       <Button
                         asChild
                         className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2"
@@ -312,6 +312,21 @@ export default function WaitlistLanding() {
                       >
                         <a href="https://x.com/wizardingrealms?s=11" target="_blank" rel="noreferrer">
                           Join the X
+                        </a>
+                      </Button>
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="w-full border-white/40 text-white hover:bg-white/10 py-2 sm:basis-full"
+                      >
+                        <a
+                          href="https://www.tiktok.com/@wizardingrealms"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <TikTokIcon className="h-4 w-4" />
+                          Follow on TikTok
                         </a>
                       </Button>
                     </div>
@@ -400,7 +415,7 @@ export default function WaitlistLanding() {
                           height={150}
                           className="absolute w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)] rotate-3"
                           style={{
-                            left: '10%',
+                            left: '25%',
                             top: '20%',
                           }}
                           unoptimized
@@ -440,7 +455,7 @@ export default function WaitlistLanding() {
                       <div className="pt-2 text-sm md:text-xl text-white/80">
                         Enter your email • Join the waitlist • Guard your chosen realm.
                       </div>
-                      <div className="pt-3 flex flex-col sm:flex-row gap-3">
+                      <div className="pt-3 flex flex-col sm:flex-row sm:flex-wrap gap-3">
                         <Button
                           asChild
                           className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-base md:text-lg py-3"
@@ -456,6 +471,21 @@ export default function WaitlistLanding() {
                         >
                           <a href="https://x.com/wizardingrealms?s=11" target="_blank" rel="noreferrer">
                             Join the X
+                          </a>
+                        </Button>
+                        <Button
+                          asChild
+                          variant="outline"
+                          className="w-full border-white/40 text-white hover:bg-white/10 text-base md:text-lg py-3 sm:basis-full"
+                        >
+                          <a
+                            href="https://www.tiktok.com/@wizardingrealms"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center justify-center gap-2"
+                          >
+                            <TikTokIcon className="h-5 w-5" />
+                            Follow on TikTok
                           </a>
                         </Button>
                       </div>
