@@ -170,7 +170,7 @@ export default function WaitlistLanding() {
 
         {/* Fixed Archon Gif - Top Right */}
         {windowWidth >= 1225 && (
-          <div className="absolute top-20 right-0 md:right-1 lg:right-2 xl:right-8 pointer-events-none z-20 hidden sm:block">
+          <div className="absolute top-20 right-0 md:right-1 lg:right-2 xl:right-8 translate-x-4 md:translate-x-6 lg:translate-x-8 pointer-events-none z-20 hidden sm:block">
             <Image
               src="/archon.gif"
               alt="Mythical steed"
